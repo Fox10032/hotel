@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.dao.UserMapper">
+
+    <insert id="addUser">
+        insert into t_user(loginName,password,realName,idCard,phone,email,status,createDate,salt)
+        values(#{loginName},#{password},#{realName},#{idCard},#{phone},#{email},#{status},#{createDate},#{salt})
+    </insert>
+
+    <select id="findUserByName" resultType="com.bdqn.entity.User">
+        select * from t_user where loginName = #{loginName}
+    </select>
+    <select id="findUserByRealName" resultType="com.bdqn.entity.User">
+        select * from t_user where realName = #{realName}
+    </select>
+
+    <!-- 查询用户列表 -->
+    <select id="findUserList" resultType="com.bdqn.entity.User">
+        select * from t_user
+        <where>
+            <if test="loginName!=null and loginName!=''">
+                and e.loginName like concat('%',#{loginName},'%')
+            </if>
+            <if test="realName!=null and realName!=''">
+                and e.name like concat('%',#{realName},'%')
+            </if>
+
+        </where>
+    </select>
+    <update id="updateUser">
+        update t_user
+        <set>
+            <if test="password!=null and password!=''">
+                password = #{password},
+            </if>
+            <if test="realName!=null and realName!=''">
+                realName = #{realName},
+            </if>
+            <if test="idCard!=null">
+                idCard = #{idCard},
+            </if>
+            <if test="phone!=null">
+                phone = #{phone},
+            </if>
+            <if test="email!=null">
+                email = #{email},
+            </if>
+            <if test="status!=null and status!=''">
+                status = #{status},
+            </if>
+            <if test="createDate!=null and createDate!=''">
+                createDate = #{createDate},
+            </if>
+            <if test="salt!=null">
+                salt = #{salt},
+            </if>
+
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        delete from t_user  where id = #{id}
+    </delete>
+</mapper>
