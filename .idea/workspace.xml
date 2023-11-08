@@ -111,7 +111,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16796875" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -388,7 +388,7 @@
       <workItem from="1698384500715" duration="181000" />
       <workItem from="1699416866652" duration="1610000" />
       <workItem from="1699420455870" duration="187000" />
-      <workItem from="1699423540855" duration="646000" />
+      <workItem from="1699423540855" duration="2471000" />
     </task>
     <task id="LOCAL-00001" summary="ssm_hotel第一次提交">
       <created>1699417235594</created>
@@ -420,6 +420,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="992" y="383" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1699420552264" />
+    <state x="463" y="165" key="SettingsEditor" timestamp="1699426029771">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1699426029771" />
     <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1699423576473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
